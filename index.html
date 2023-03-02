@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Reactive Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		/* Grid */
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+		}
+		/* Header */
+		.header {
+			background-color: #333;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			font-size: 36px;
+		}
+
+		/* Navigation */
+		.navbar {
+			background-color: #333;
+			color: white;
+		}
+
+		.nav-link {
+			color: white;
+		}
+
+		/* Projects */
+		.projects {
+			padding: 50px;
+			background-color: #f8f9fa;
+		}
+
+		.project {
+			margin-bottom: 50px;
+		}
+
+		.project-title {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+
+		.project-description {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		.project-link {
+			font-size: 18px;
+			display: block;
+			margin-top: 20px;
+		}
+
+		/* Contact */
+		.contact {
+			padding: 50px;
+			background-color: #f8f9fa;
+		}
+
+		.contact-form {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.contact-label {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		.contact-input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			font-size: 18px;
+		}
+
+		.contact-textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			font-size: 18px;
+			height: 150px;
+		}
+
+		.contact-submit {
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		.contact-submit:hover {
+			background-color: #0062cc;
+		}
+		.flex-container {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px 0;
+		}
+
+		.container {
+			background-color: #f2f2f2;
+			padding: 20px;
+			margin: 20px;
+			border-radius: 5px;
+			max-width: 700px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+		}
+
+		.container h3 {
+			font-weight: bold;
+			font-size: 2rem;
+			margin-bottom: 10px;
+		}
+
+		.container p {
+			font-size: 0.9rem;
+			line-height: 1.5;
+		}
+		.flex-container-2 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 20px 0;
+		}
+
+		.container-regular {
+			width: 80%;
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #f5f5f5;
+			border-radius: 5px;
+		}
+
+		#projects {
+			background-color: #fff;
+		}
+
+		#contact {
+			background-color: #eee;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		.card {
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		.card-img-top {
+			width: 100%;
+			height: auto;
+		}
+
+		.card-title {
+			font-size: 20px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.card-text {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
+		.btn-primary {
+			background-color: #007bff;
+			border: 1px solid;
+		}
+		.card-body-contact{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 20px;
+		}
+	</style>
+</head>
+	<body>
+		<header class="header">
+			My Reactive Portfolio
+		</header>
+
+		<nav class="navbar navbar-expand-lg">
+			<a class="navbar-brand" href="#">My Portfolio</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#experience">Experience</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#projects">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="grid-container">
+			<div class="flex-container">
+				<div class="container" id="about">
+					<h3>About Me</h3>
+					<p>Hello, my name is Simeon Ngalamou and I'm a 23-year-old computer science student with experience in web development using technologies such as Node.js, React, Angular, JavaScript, HTML, CSS, MongoDB, and REST APIs.
+						I consider myself a self-starter and a lover of learning. I'm always eager to take on new challenges and projects that allow me to grow both personally and professionally. I enjoy working collaboratively and independently, and I'm comfortable taking the lead when necessary.
+						In addition to my technical skills, I'm also fluent in Spanish and French, which I taught myself over the years. I'm currently working on learning Portuguese and Italian as well. I believe that learning new languages not only opens up new opportunities for communication, but also helps broaden our perspectives and understanding of different cultures.
+						As a web developer, I'm passionate about creating intuitive and user-friendly interfaces that make a positive impact on people's lives. I'm always seeking out new technologies and techniques to improve my skills and stay up-to-date with the latest trends in the industry.					
+						Thank you for taking the time to learn a bit about me. If you'd like to know more or have any questions, please don't hesitate to contact me.</p>
+				</div>
+			</div>
+
+			<div class="container" id="experience">
+				<h3>Experience</h3>
+				<p><strong>Undergraduate Researcher</strong></p>
+				<p><em>STEM Undergraduate Research Experiences (SURE) Program, Lewis University
+					Summer 2020</em></p>
+				<ul>
+					<li>Collaborated with students from multiple STEM disciplines to engage in undergraduate research over a 10-week period.</li>
+					<li>Engaged in weekly discussions on research ethics, data analysis methods, scientific writing, resume building, and other related topics.</li>
+					<li>Coded a lane departure warning system in Python using the OpenCV framework under the supervision of Dr. Mahmood Al-khassaweneh.</li>
+					<li>Utilized data analysis techniques to extract useful information from images and videos.</li>
+					<li>Presented outcomes of the research project at a research symposium and gained experience in communicating scientific findings to a wider audience.</li>
+					<li>Strengthened my research skills, including scientific writing, data analysis, and critical thinking.</li>
+					<li>Learned to work effectively as a part of a team, working closely with other researchers, mentors, and program coordinators.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="flex-container-2">
+			<div class="container-regular" id="projects">
+				<h2>Projects</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Project 1</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae bibendum eros, in tincidunt mauris.</p>
+								<a href="#" class="btn btn-primary">View Project</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Project 2</h5>
+								<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae bibendum eros, in tincidunt mauris.</p>
+								<a href="#" class="btn btn-primary">View Project</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex-container-2">
+			<div class="container-regular" id="contact">
+				<h2>Contact Me</h2>
+				<div class="card">
+					<div class="card-body-contact">
+						<a href="https://www.linkedin.com/in/simeon-ngalamou-11979a152/" class="btn btn-primary" target="_blank">LinkedIn</a>
+						<a href="mailto:simeonngalamou@gmail.com" class="btn btn-primary">Email</a>					
+						<a href="updatedResume2023.pdf" class="btn btn-primary" target="_blank">Resume</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
